@@ -36,7 +36,7 @@ ENV CLONE_TAG=master
 
 ARG CLONE_REPO
 
-RUN git clone -b ${CLONE_TAG} --depth 1 $CLONE_REPO .
+RUN git clone -b ${CLONE_TAG} --depth 1 git remote get-url --all origin .
 
 # CUDA_ARCH_NAME=Manual is a workaround the lack of compute_60 or higher in cuda7.5's cuda
 # Required for recent GPUs
