@@ -7,7 +7,7 @@ RUN apt-get -y install libxrender-dev
 RUN apt-get -y install libxext-dev
 # Install TensorFlow, Keras and PyTorch
 
-RUN python3 -m pip install --upgrade pip
-RUN pip3 install docopt hdfs numpy scipy sklearn pandas mpi4py gitpython torchnet pydot tabulate jupyter matplotlib qgrid graphviz ipywidgets bqplot pyyaml pytest xlsxwriter opencv-python
+RUN python -m pip install --upgrade pip
+RUN pip install docopt hdfs numpy scipy sklearn pandas mpi4py gitpython torchnet pydot tabulate jupyter matplotlib qgrid graphviz ipywidgets bqplot pyyaml pytest xlsxwriter opencv-python
 
 WORKDIR "/examples"
