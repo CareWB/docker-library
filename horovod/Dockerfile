@@ -1,15 +1,14 @@
 FROM uber/horovod:0.15.2-tf1.12.0-torch1.0.0-py3.5
 
-RUN pip install docopt hdfs numpy scipy sklearn pandas mpi4py gitpython torchnet pydot tabulate jupyter matplotlib qgrid graphviz ipywidgets bqplot pyyaml pytest xlsxwriter cython pystan fbprophet opencv-python
+RUN apt-get -y update && apt-get install apt-utils
 
-RUN apt-get -y update  && apt-get install -y \
-  python3-dev \
-  apt-utils \
+RUN pip install docopt hdfs numpy scipy sklearn pandas mpi4py gitpython torchnet pydot tabulate jupyter matplotlib qgrid graphviz ipywidgets bqplot pyyaml pytest xlsxwriter opencv-python pystan fbprophet
+
+RUN apt-get install -y \
   build-essential \
   libglib2.0 \
   libsm-dev \
   libxrender-dev \
-  libxext-dev \
-&& rm -rf /var/lib/apt/lists/*
+  libxext-dev
 
 WORKDIR "/examples"
