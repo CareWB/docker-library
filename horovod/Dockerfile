@@ -13,4 +13,4 @@ RUN apt-get install -y \
   libxext-dev \
   && rm -rf /var/lib/apt/lists/*
 
-CMD ["/bin/bash","-l"]
+CMD ["python -m http.server"]
