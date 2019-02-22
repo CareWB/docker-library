@@ -13,4 +13,4 @@ RUN apt-get install -y \
   libxext-dev \
   && rm -rf /var/lib/apt/lists/*
 
-CMD ["python -m http.server"]
+CMD jupyter notebook --no-browser --ip=0.0.0.0 --allow-root --NotebookApp.token= --NotebookApp.allow_origin='*'
