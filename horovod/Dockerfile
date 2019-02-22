@@ -13,4 +13,4 @@ RUN apt-get install -y \
   libxext-dev \
   && rm -rf /var/lib/apt/lists/*
 
-WORKDIR "/examples"
+CMD ["/bin/bash","-l"]
