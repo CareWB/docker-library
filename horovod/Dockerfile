@@ -8,6 +8,7 @@ RUN pip install pystan
 RUN pip install docopt hdfs numpy scipy sklearn pandas mpi4py gitpython torchnet pydot tabulate jupyter matplotlib qgrid graphviz ipywidgets bqplot pyyaml pytest xlsxwriter opencv-python  fbprophet
 
 RUN apt-get install -y \
+  libglib2.0-0 \
   libsm-dev \
   libxrender-dev \
   libxext-dev \
